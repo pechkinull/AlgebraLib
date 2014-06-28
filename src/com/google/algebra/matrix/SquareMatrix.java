@@ -48,5 +48,15 @@ public class SquareMatrix {
 	  return mElements[row][col];	
 	}
 	
-	
+	@Override
+	public String toString() {
+	  StringBuilder str = new StringBuilder(); 
+	  for (int i = 0; i < getRows(); ++i) {
+		for (int j = 0; j < getCols(); ++j) {
+		  str.append(Double.toString(getElement(i, j))).append(" ");   
+		}  
+        str.append("\n"); 
+	  }   
+	 return str.toString();
+	} 
 }
