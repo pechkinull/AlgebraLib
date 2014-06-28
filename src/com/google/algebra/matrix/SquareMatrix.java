@@ -24,6 +24,14 @@ public class SquareMatrix {
 	  System.arraycopy(array, 0, mElements, 0, array.length);
 	}
 	
+	/**
+	 * @brief Copy ctor
+	 */
+	public SquareMatrix(final SquareMatrix obj) {
+	  mElements = new double[obj.getRows()][obj.getCols()];	
+	  System.arraycopy(obj.mElements, 0, mElements, 0, obj.getDims());
+	}
+	
 	public int getCols() {
 	  return mElements[0].length;
 	} 
@@ -32,7 +40,13 @@ public class SquareMatrix {
 	  return mElements.length;
 	}
 	
+	public int getDims() {
+	  return mElements.length;
+	}
+	
 	public double getElement(int row, int col) {
 	  return mElements[row][col];	
 	}
+	
+	
 }
