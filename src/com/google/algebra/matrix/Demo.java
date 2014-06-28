@@ -9,6 +9,10 @@ public class Demo {
 		
 		System.out.println(mat1.getCols() + " " + mat1.getRows());
 		System.out.println(mat2.getCols() + " " + mat2.getRows() + " " + mat2.getElement(1, 2));
+		System.out.println(mat1.toString());
+		System.out.println("");
+		System.out.println(mat2);
+		
 	}
 }
 
